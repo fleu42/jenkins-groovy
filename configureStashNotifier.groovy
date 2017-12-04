@@ -9,8 +9,7 @@ String credentials = '01111111-e222-3333-eeff-4f4444e44bc4';
 def j = Jenkins.getInstance();
 
 def stash = j.getExtensionList(
-  org.jenkinsci.plugins.stashNotifier.StashNotifier.DescriptorImpl.class
-)[0];
+  stashNotifier.StashNotifier.DescriptorImpl.class)[0];
 
 def formData = [
   stashRootUrl: url,
